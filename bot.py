@@ -1,12 +1,11 @@
 # - *- coding: utf- 8 - *-
-from imp import reload
+
 
 import telebot
 from telebot import types
 import sys
 import configure
 
-reload(sys)
 sys.setdefaultencoding('utf-8')
 
 bot = telebot.TeleBot(configure.config['token'], parse_mode='Markdown')
