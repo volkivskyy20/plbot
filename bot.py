@@ -3,10 +3,9 @@
 
 import telebot
 from telebot import types
-import sys
+
 import configure
 
-sys.setdefaultencoding('utf-8')
 
 bot = telebot.TeleBot(configure.config['token'], parse_mode='Markdown')
 name = ''
@@ -140,7 +139,7 @@ def callback_inline(call):
         def get_number(message):
             global number
             number = message.text
-            bot.send_message(917722215, "Ім'я:\n" + name + " \n" + "Номер телефону\n" + str(number))
+            bot.send_message(586178523, "Ім'я:\n" + name + " \n" + "Номер телефону\n" + str(number))
             bot.send_message(message.chat.id, "Дякую, найближчим часом з вами зв'яжуться", reply_markup=key)
 
     elif call.data == 'post':
